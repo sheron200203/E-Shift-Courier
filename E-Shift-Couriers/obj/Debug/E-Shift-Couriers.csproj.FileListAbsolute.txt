@@ -1,0 +1,9 @@
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\bin\Debug\E-Shift-Couriers.exe.config
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\bin\Debug\E-Shift-Couriers.exe
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\bin\Debug\E-Shift-Couriers.pdb
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-Couriers.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Properties.Resources.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-Couriers.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-Couriers.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-Couriers.exe
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-Couriers.pdb
