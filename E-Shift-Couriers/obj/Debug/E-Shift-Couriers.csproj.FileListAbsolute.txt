@@ -50,3 +50,4 @@ C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_C
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.LoginForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerLoadForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerDashboardForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerJobForm.resources

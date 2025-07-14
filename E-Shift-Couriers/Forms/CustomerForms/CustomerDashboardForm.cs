@@ -25,7 +25,7 @@ namespace E_Shift_Couriers.Forms.CustomerForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            JobForm jobForm = new JobForm();
+            CustomerJobForm jobForm = new CustomerJobForm();
             jobForm.Show();
         }
 

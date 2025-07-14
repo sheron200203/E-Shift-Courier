@@ -92,6 +92,7 @@
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(100, 20);
             this.txtEnd.TabIndex = 5;
+            this.txtEnd.TextChanged += new System.EventHandler(this.txtEnd_TextChanged);
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Start Location";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -110,6 +112,7 @@
             this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "End Location";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -119,6 +122,7 @@
             this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "Customers";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -128,6 +132,7 @@
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 9;
             this.label4.Text = "Job Date";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // JobForm
             // 

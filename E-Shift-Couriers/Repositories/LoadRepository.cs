@@ -1,4 +1,5 @@
 ﻿using E_Shift_Couriers.Models;
+using E_Shift_Couriers.Utils;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -13,39 +14,17 @@ namespace E_Shift_Couriers.Repositories
         public void Add(Load load)
         {
             var conn = DbConnection.GetConnection();
-            string query = "INSERT INTO Loads (JobId, ProductId, TransportUnitId, Quantity) " +
-                              "VALUES (@job, @product, @unit, @qty)";
+            string query = "INSERT INTO Loads  (LoadCode, JobId, ProductId, TransportUnitId, Quantity) " +
+                              "VALUES (@code, @job, @product, @unit, @qty)";
             var cmd = new MySqlCommand(query, conn);
 
+            cmd.Parameters.AddWithValue("@code", CodeGenerator.GenerateLoadCode());
             cmd.Parameters.AddWithValue("@job", load.JobId);
             cmd.Parameters.AddWithValue("@product", load.ProductId);
             cmd.Parameters.AddWithValue("@unit", load.TransportUnitId);
             cmd.Parameters.AddWithValue("@qty", load.Quantity);
             cmd.ExecuteNonQuery();
 
-        }
-
-        public List<Load> GetAllRaw()
-        {
-            var loads = new List<Load>();
-            var conn = DbConnection.GetConnection();
-            string query = "SELECT * FROM Loads";
-            var cmd = new MySqlCommand(query, conn);
-            var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Load load = new Load();
-                load.LoadId = Convert.ToInt32(reader["LoadId"]);
-                load.JobId = Convert.ToInt32(reader["JobId"]);
-                load.ProductId = Convert.ToInt32(reader["ProductId"]);
-                load.TransportUnitId = Convert.ToInt32(reader["TransportUnitId"]);
-                load.Quantity = Convert.ToInt32(reader["Quantity"]);
-
-                loads.Add(load);
-            }
-
-            return loads;
         }
 
 
@@ -57,12 +36,14 @@ namespace E_Shift_Couriers.Repositories
             string query = @"
         SELECT 
             l.LoadId,
+            l.LoadCode,
             l.JobId,
             p.Name AS ProductName,
             l.Quantity,
             u.LorryNumber,
             u.DriverName,
-            u.AssistantName
+            u.AssistantName,
+            j.JobCode
         FROM Loads l
         JOIN Products p ON l.ProductId = p.ProductId
         LEFT JOIN TransportUnits u ON l.TransportUnitId = u.UnitId
@@ -85,8 +66,9 @@ namespace E_Shift_Couriers.Repositories
             {
                 loads.Add(new LoadView
                 {
+                    LoadCode = reader["LoadCode"].ToString(),
                     LoadId = Convert.ToInt32(reader["LoadId"]),
-                    JobId = Convert.ToInt32(reader["JobId"]),
+                    JobCode = reader["JobCode"].ToString(),
                     ProductName = reader["ProductName"].ToString(),
                     Quantity = Convert.ToInt32(reader["Quantity"]),
                     LorryNumber = reader["LorryNumber"].ToString(),

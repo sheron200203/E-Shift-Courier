@@ -80,7 +80,10 @@ namespace E_Shift_Couriers.Forms.CustomerForms
             dgvLoads.DataSource = loads;
 
             dgvLoads.Columns["LoadId"].Visible = false;
-            dgvLoads.Columns["JobId"].Visible = false;
+             
+            dgvLoads.Columns["LorryNumber"].Visible = false;
+            dgvLoads.Columns["DriverName"].Visible = false;
+            dgvLoads.Columns["AssistantName"].Visible = false;
         }
     }
 }

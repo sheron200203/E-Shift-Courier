@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_Shift_Couriers.Utils;
 
 namespace E_Shift_Couriers.Repositories
 {
@@ -13,10 +14,11 @@ namespace E_Shift_Couriers.Repositories
         public void Add(Job job)
         {
             var conn = DbConnection.GetConnection();
-            string query = "INSERT INTO Jobs (CustomerId, StartLocation, EndLocation, RequestedDate, Status) " +
-                            "VALUES (@cid, @start, @end, @date, @status)";
+            string query = "INSERT INTO Jobs  (JobCode, CustomerId, StartLocation, EndLocation, RequestedDate, Status) " +
+                            "VALUES (@code, @cid, @start, @end, @date, @status)";
             var cmd = new MySqlCommand(query, conn);
 
+            cmd.Parameters.AddWithValue("@code", CodeGenerator.GenerateJobCode());
             cmd.Parameters.AddWithValue("@cid", job.CustomerId);
             cmd.Parameters.AddWithValue("@start", job.StartLocation);
             cmd.Parameters.AddWithValue("@end", job.EndLocation);
@@ -26,28 +28,63 @@ namespace E_Shift_Couriers.Repositories
 
         }
 
-        public List<Job> GetAll()
+
+
+        public List<JobView> GetAll(int userId, bool isAdmin)
         {
-            var jobs = new List<Job>();
+            var jobs = new List<JobView>();
             var conn = DbConnection.GetConnection();
-            string query = "SELECT * FROM Jobs";
-            var cmd = new MySqlCommand(query, conn);
-            var reader = cmd.ExecuteReader();
+            MySql.Data.MySqlClient.MySqlDataReader reader = null;
 
-            while (reader.Read())
+            string query = @"
+SELECT 
+    j.JobId,
+    j.JobCode,
+    j.StartLocation,
+    j.EndLocation,
+    j.RequestedDate,
+    j.Status,
+    c.Name AS CustomerName
+FROM Jobs j
+JOIN Customers c ON j.CustomerId = c.CustomerId";
+
+            if (!isAdmin)
             {
-                Job job = new Job();
-                job.JobId = Convert.ToInt32(reader["JobId"]);
-                job.CustomerId = Convert.ToInt32(reader["CustomerId"]);
-                job.StartLocation = reader["StartLocation"].ToString();
-                job.EndLocation = reader["EndLocation"].ToString();
-                job.RequestedDate = Convert.ToDateTime(reader["RequestedDate"]);
-                job.Status = reader["Status"].ToString();
-
-                jobs.Add(job);
+                query += " WHERE j.CustomerId = @userId";
             }
+
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);
+            if (!isAdmin)
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+            }
+
+            try
+            {
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    jobs.Add(new JobView
+                    {
+                        JobCode = reader["JobCode"].ToString(),
+                        JobId = Convert.ToInt32(reader["JobId"]),
+                        CustomerName = reader["CustomerName"].ToString(),
+                        StartLocation = reader["StartLocation"].ToString(),
+                        EndLocation = reader["EndLocation"].ToString(),
+                        RequestedDate = Convert.ToDateTime(reader["RequestedDate"]),
+                        Status = reader["Status"].ToString()
+                    });
+                }
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conn.State == System.Data.ConnectionState.Open) conn.Close();
+            }
+
             return jobs;
         }
+
     }
 
 }

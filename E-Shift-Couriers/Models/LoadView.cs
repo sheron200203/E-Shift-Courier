@@ -9,7 +9,8 @@ namespace E_Shift_Couriers.Models
     public class LoadView
     {
         public int LoadId { get; set; }
-        public int JobId { get; set; }
+        public string LoadCode { get; set; }
+        public string JobCode { get; set; }
         public string ProductName { get; set; }
         public int Quantity { get; set; }
         public string LorryNumber { get; set; }

@@ -87,7 +87,6 @@ namespace E_Shift_Couriers.Forms
             dgvLoads.DataSource = loads;
 
             dgvLoads.Columns["LoadId"].Visible = false;
-            dgvLoads.Columns["JobId"].Visible = false;
         }
 
         private void dgvLoads_CellContentClick(object sender, DataGridViewCellEventArgs e)
