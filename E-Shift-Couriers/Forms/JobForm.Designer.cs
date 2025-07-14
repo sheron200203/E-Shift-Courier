@@ -34,6 +34,10 @@
             this.Add = new System.Windows.Forms.Button();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
             this.txtEnd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +52,7 @@
             // 
             // txtStart
             // 
-            this.txtStart.Location = new System.Drawing.Point(299, 159);
+            this.txtStart.Location = new System.Drawing.Point(299, 152);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(100, 20);
             this.txtStart.TabIndex = 1;
@@ -56,7 +60,7 @@
             // 
             // dtRequestedDate
             // 
-            this.dtRequestedDate.Location = new System.Drawing.Point(312, 205);
+            this.dtRequestedDate.Location = new System.Drawing.Point(296, 198);
             this.dtRequestedDate.Name = "dtRequestedDate";
             this.dtRequestedDate.Size = new System.Drawing.Size(200, 20);
             this.dtRequestedDate.TabIndex = 2;
@@ -64,7 +68,7 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(676, 159);
+            this.Add.Location = new System.Drawing.Point(560, 198);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 3;
@@ -84,16 +88,56 @@
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(412, 162);
+            this.txtEnd.Location = new System.Drawing.Point(502, 157);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(100, 20);
             this.txtEnd.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(198, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Start Location";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(417, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "End Location";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(198, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Customers";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(198, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Job Date";
             // 
             // JobForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEnd);
             this.Controls.Add(this.dgvJobs);
             this.Controls.Add(this.Add);
@@ -116,5 +160,9 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.TextBox txtEnd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

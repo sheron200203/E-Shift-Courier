@@ -12,23 +12,14 @@ namespace E_Shift_Couriers.Repositories
     {
         public void Add(Product product)
         {
-            MySqlConnection conn = null;
-            try
-            {
-                conn = DbConnection.GetConnection();
-                conn.Open();
+            var conn = DbConnection.GetConnection();
+            string query = "INSERT INTO Products (Name, Description) VALUES (@name, @desc)";
+            var cmd = new MySqlCommand(query, conn);
 
-                string query = "INSERT INTO Products (Name, Description) VALUES (@name, @desc)";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@name", product.Name);
-                cmd.Parameters.AddWithValue("@desc", product.Description);
-                cmd.ExecuteNonQuery();
-            }
-            finally
-            {
-                if (conn != null && conn.State == System.Data.ConnectionState.Open)
-                    conn.Close();
-            }
+            cmd.Parameters.AddWithValue("@name", product.Name);
+            cmd.Parameters.AddWithValue("@desc", product.Description);
+            cmd.ExecuteNonQuery();
+
         }
 
         public List<Product> GetAll()

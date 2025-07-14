@@ -17,7 +17,7 @@ namespace E_Shift_Couriers.Services
             repo.Add(load);
         }
 
-        public List<Load> GetAllLoads()
+        public List<LoadView> GetAllLoads()
         {
             return repo.GetAll();
         }

@@ -32,12 +32,14 @@
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txtProductDesc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(477, 105);
+            this.txtProductName.Location = new System.Drawing.Point(477, 43);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(100, 20);
             this.txtProductName.TabIndex = 0;
@@ -55,26 +57,46 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(608, 101);
+            this.button1.Location = new System.Drawing.Point(477, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtProductDesc
             // 
-            this.txtProductDesc.Location = new System.Drawing.Point(477, 131);
+            this.txtProductDesc.Location = new System.Drawing.Point(477, 69);
             this.txtProductDesc.Name = "txtProductDesc";
             this.txtProductDesc.Size = new System.Drawing.Size(100, 20);
             this.txtProductDesc.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(387, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(387, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Description";
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProductDesc);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvProducts);
@@ -93,5 +115,7 @@
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtProductDesc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

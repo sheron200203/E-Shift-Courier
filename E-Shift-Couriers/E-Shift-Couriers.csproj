@@ -145,6 +145,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\Load.cs" />
+    <Compile Include="Models\LoadView.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\TransportUnit.cs" />
     <Compile Include="Program.cs" />
