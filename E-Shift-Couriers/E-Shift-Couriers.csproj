@@ -173,6 +173,12 @@
     <Compile Include="Forms\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TransportUnitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,12 +195,15 @@
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerJobCountReport.cs" />
     <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobSummaryReport.cs" />
     <Compile Include="Models\Load.cs" />
     <Compile Include="Models\JobView.cs" />
     <Compile Include="Models\LoadView.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\TransportUnit.cs" />
+    <Compile Include="Models\TransportUtilizationReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdminRepository.cs" />
@@ -203,12 +212,14 @@
     <Compile Include="Repositories\JobRepository.cs" />
     <Compile Include="Repositories\LoadRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="Repositories\TransportUnitRepository.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\JobService.cs" />
     <Compile Include="Services\LoadService.cs" />
     <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\ReportService.cs" />
     <Compile Include="Services\TransportUnitService.cs" />
     <Compile Include="Utils\CodeGenerator.cs" />
     <Compile Include="Utils\PasswordHasher.cs" />
@@ -245,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransportUnitForm.resx">
       <DependentUpon>TransportUnitForm.cs</DependentUpon>

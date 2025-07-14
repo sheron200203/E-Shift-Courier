@@ -47,5 +47,11 @@ namespace E_Shift_Couriers.Forms
             TransportUnitForm transportUnitForm = new TransportUnitForm();  
             transportUnitForm.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ReportsForm reportsForm = new ReportsForm();   
+            reportsForm.Show();
+        }
     }
 }
