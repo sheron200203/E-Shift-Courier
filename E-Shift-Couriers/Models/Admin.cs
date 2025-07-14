@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Shift_Couriers.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace E_Shift_Couriers.Models
 {
-    public class Admin
+    public class Admin: E_Shift_Couriers.Interfaces.IUser
     {
-        public int ID { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string PasswordHash { get; set; }
+        public UserRole Role => UserRole.Admin;
     }
 }

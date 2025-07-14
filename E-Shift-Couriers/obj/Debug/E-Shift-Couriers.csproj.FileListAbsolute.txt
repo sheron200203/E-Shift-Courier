@@ -47,3 +47,4 @@ C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_C
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.LoadForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.ProductForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.TransportUnitForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.LoginForm.resources

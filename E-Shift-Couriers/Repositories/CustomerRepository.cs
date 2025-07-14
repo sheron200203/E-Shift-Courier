@@ -18,7 +18,7 @@ namespace E_Shift_Couriers.Repositories
             {
                 customers.Add(new Customer
                 {
-                    ID = reader.GetInt32("CustomerId"),
+                    Id = reader.GetInt32("CustomerId"),
                     Name = reader.GetString("Name"),
                     Email = reader.GetString("Email"),
                     Phone = reader.GetString("Phone")
@@ -39,7 +39,7 @@ namespace E_Shift_Couriers.Repositories
             {
                 return new Customer
                 {
-                    ID = reader.GetInt32("CustomerId"),
+                    Id = reader.GetInt32("CustomerId"),
                     Name = reader.GetString("Name"),
                     Email = reader.GetString("Email"),
                     Phone = reader.GetString("Phone")
@@ -59,7 +59,27 @@ namespace E_Shift_Couriers.Repositories
             cmd.ExecuteNonQuery();
 
             // Optionally fetch last inserted ID and assign to customer.ID
-            customer.ID = (int)cmd.LastInsertedId;
+            customer.Id = (int)cmd.LastInsertedId;
+        }
+
+
+        public Customer GetByUsername(string username)
+        {
+            var conn = DbConnection.GetConnection();
+            var cmd = new MySqlCommand("SELECT * FROM Customer WHERE Username = @username", conn);
+            cmd.Parameters.AddWithValue("@username", username);
+
+            var reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                return new Customer
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("CustomerId")),
+                    Username = reader.GetString(reader.GetOrdinal("userName")),
+                    PasswordHash = reader.GetString(reader.GetOrdinal("passwordHash")),
+                };
+            }
+            return null;
         }
     }
 }

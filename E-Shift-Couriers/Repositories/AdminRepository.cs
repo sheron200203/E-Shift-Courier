@@ -20,36 +20,21 @@ namespace E_Shift_Couriers.Repositories
 
         public Admin GetByUsername(string username)
         {
-            MySqlConnection conn = null;
-            try
+            var conn = DbConnection.GetConnection();
+            var cmd = new MySqlCommand("SELECT * FROM Admin WHERE Username = @username", conn);
+            cmd.Parameters.AddWithValue("@username", username);
+
+            var reader = cmd.ExecuteReader();
+            if (reader.Read())
             {
-                conn = new MySqlConnection(connectionString);
-                conn.Open();
-
-                var cmd = new MySqlCommand("SELECT * FROM Admin WHERE userName = @username", conn);
-                cmd.Parameters.AddWithValue("@username", username);
-
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                return new Admin
                 {
-                    return new Admin
-                    {
-                        ID = reader.GetInt32("ID"),
-                        UserName = reader.GetString("userName"),
-                        Password = reader.GetString("password"),
-                        Name = reader.GetString("name")
-                    };
-                }
-
-                return null;
+                    Id = reader.GetInt32(reader.GetOrdinal("AdminId")),
+                    Username = reader.GetString(reader.GetOrdinal("Username")),
+                    PasswordHash = reader.GetString(reader.GetOrdinal("passwordHash")),                                                                
+                };
             }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Dispose();
-                }
-            }
+            return null;
         }
     }
 }

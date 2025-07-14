@@ -35,7 +35,7 @@ namespace E_Shift_Couriers.Forms
 
             Job job = new Job
             {
-                CustomerId = customer.ID,
+                CustomerId = customer.Id,
                 StartLocation = txtStart.Text,
                 EndLocation = txtEnd.Text,
                 RequestedDate = dtRequestedDate.Value
