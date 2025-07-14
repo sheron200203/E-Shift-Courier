@@ -26,5 +26,9 @@ namespace E_Shift_Couriers.Services
             return repo.GetAll(userId, isAdmin);
         }
 
+        public void AssignTransportUnit(int loadId, int unitId)
+        {
+            repo.AssignTransportUnit(loadId, unitId);
+        }
     }
 }

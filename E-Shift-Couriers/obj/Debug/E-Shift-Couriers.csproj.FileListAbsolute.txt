@@ -51,3 +51,6 @@ C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_C
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerLoadForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerDashboardForm.resources
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForms.CustomerJobForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.AddLoadForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.AssignTransportUnitForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.UpdateJobStatusForm.resources

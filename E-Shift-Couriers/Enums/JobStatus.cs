@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace E_Shift_Couriers.Enums
 {
-    public enum JobStatus { Pending, Accepted, Declined }
+    public enum JobStatus { Pending, Accepted, Declined, Completed}
 }

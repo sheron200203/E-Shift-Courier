@@ -76,10 +76,10 @@
             // dgvJobs
             // 
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.Location = new System.Drawing.Point(89, 221);
+            this.dgvJobs.Location = new System.Drawing.Point(12, 221);
             this.dgvJobs.Name = "dgvJobs";
             this.dgvJobs.RowHeadersWidth = 51;
-            this.dgvJobs.Size = new System.Drawing.Size(623, 150);
+            this.dgvJobs.Size = new System.Drawing.Size(776, 217);
             this.dgvJobs.TabIndex = 14;
             // 
             // Add

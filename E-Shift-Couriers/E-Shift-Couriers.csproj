@@ -107,6 +107,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddLoadForm.Designer.cs">
+      <DependentUpon>AddLoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssignTransportUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssignTransportUnitForm.Designer.cs">
+      <DependentUpon>AssignTransportUnitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     <Compile Include="Forms\TransportUnitForm.Designer.cs">
       <DependentUpon>TransportUnitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UpdateJobStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateJobStatusForm.Designer.cs">
+      <DependentUpon>UpdateJobStatusForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\ICustomerService.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -195,6 +213,12 @@
     <Compile Include="Utils\CodeGenerator.cs" />
     <Compile Include="Utils\PasswordHasher.cs" />
     <Compile Include="Utils\Validator.cs" />
+    <EmbeddedResource Include="Forms\AddLoadForm.resx">
+      <DependentUpon>AddLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssignTransportUnitForm.resx">
+      <DependentUpon>AssignTransportUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TransportUnitForm.resx">
       <DependentUpon>TransportUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateJobStatusForm.resx">
+      <DependentUpon>UpdateJobStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

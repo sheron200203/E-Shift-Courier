@@ -85,6 +85,17 @@ JOIN Customers c ON j.CustomerId = c.CustomerId";
             return jobs;
         }
 
-    }
 
+
+        public void UpdateStatus(int jobId, string status)
+        {
+            var conn = DbConnection.GetConnection();
+            string query = "UPDATE Jobs SET Status = @status WHERE JobId = @id";
+            var cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@id", jobId);
+            cmd.ExecuteNonQuery();
+        }
+
+    }
 }

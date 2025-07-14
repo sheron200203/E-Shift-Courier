@@ -22,7 +22,21 @@ namespace E_Shift_Couriers.Forms
             InitializeComponent();
             LoadCustomers();
             LoadJobs();
+            dgvJobs.CellClick += dgvJobs_CellClick;
         }
+
+        private void dgvJobs_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || dgvJobs.Columns[e.ColumnIndex].Name != "StatusAction") return;
+
+            var job = dgvJobs.Rows[e.RowIndex].DataBoundItem as JobView;
+            if (job == null) return;
+
+            var updateForm = new UpdateJobStatusForm(job.JobId);
+            updateForm.FormClosed += (s, args) => LoadJobs(); // refresh after update
+            updateForm.ShowDialog();
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -58,8 +72,16 @@ namespace E_Shift_Couriers.Forms
 
         private void LoadJobs()
         {
+            dgvJobs.Columns.Clear(); // Clear old columns
             dgvJobs.DataSource = null;
             dgvJobs.DataSource = jobService.GetAllJobs();
+
+            var btnCol = new DataGridViewButtonColumn();
+            btnCol.Name = "StatusAction";
+            btnCol.HeaderText = "Change Status";
+            btnCol.Text = "Update";
+            btnCol.UseColumnTextForButtonValue = true;
+            dgvJobs.Columns.Add(btnCol);
         }
 
 

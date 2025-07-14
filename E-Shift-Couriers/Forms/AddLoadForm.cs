@@ -10,80 +10,72 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Shift_Couriers.Forms.CustomerForms
+namespace E_Shift_Couriers.Forms
 {
-    public partial class CustomerLoadForm : Form
+    public partial class AddLoadForm : Form
     {
-      
         private LoadService loadService = new LoadService();
         private JobService jobService = new JobService();
         private ProductService productService = new ProductService();
+        private TransportUnitService unitService = new TransportUnitService();
 
-        public CustomerLoadForm()
+        public AddLoadForm()
         {
             InitializeComponent();
             LoadCombos();
-            LoadLoads();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             if (cmbJob.SelectedItem == null || cmbProduct.SelectedItem == null)
             {
-                MessageBox.Show("Select all fields.");
+                MessageBox.Show("Select all required fields.");
                 return;
             }
 
             int quantity;
             if (!int.TryParse(txtQuantity.Text, out quantity) || quantity <= 0)
             {
-                MessageBox.Show("Enter a valid quantity greater than zero.");
+                MessageBox.Show("Enter a valid quantity.");
                 return;
             }
 
-            Load load = new Load
+            var load = new Load
             {
                 JobId = (int)cmbJob.SelectedValue,
                 ProductId = (int)cmbProduct.SelectedValue,
-                TransportUnitId = null,
+                TransportUnitId = cmbUnit.SelectedItem != null ? (int?)cmbUnit.SelectedValue : null,
                 Quantity = quantity
             };
 
             loadService.AddLoad(load);
-            MessageBox.Show("Load assigned.");
-            LoadLoads();
+            MessageBox.Show("Load added.");
+            this.Close();
         }
 
         private void LoadCombos()
         {
-            // Load Jobs
-            var jobs = jobService.GetAllJobs();
-            cmbJob.DataSource = null;
-            cmbJob.DataSource = jobs;
+            cmbJob.DataSource = jobService.GetAllJobs();
             cmbJob.DisplayMember = "JobCode";
             cmbJob.ValueMember = "JobId";
 
-            // Load Products
-            var products = productService.GetAllProducts();
-            cmbProduct.DataSource = null;
-            cmbProduct.DataSource = products;
+            cmbProduct.DataSource = productService.GetAllProducts();
             cmbProduct.DisplayMember = "Name";
             cmbProduct.ValueMember = "ProductId";
+
+            cmbUnit.DataSource = unitService.GetAllUnits();
+            cmbUnit.DisplayMember = "LorryNumber";
+            cmbUnit.ValueMember = "UnitId";
         }
 
-        private void LoadLoads()
+        private void cmbUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get loads with joined display info instead of just IDs
-            var loads = loadService.GetAllLoads();
 
-            dgvLoads.DataSource = null;
-            dgvLoads.DataSource = loads;
+        }
 
-            dgvLoads.Columns["LoadId"].Visible = false;
-             
-            dgvLoads.Columns["LorryNumber"].Visible = false;
-            dgvLoads.Columns["DriverName"].Visible = false;
-            dgvLoads.Columns["AssistantName"].Visible = false;
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -83,6 +83,16 @@ namespace E_Shift_Couriers.Repositories
             return loads;
         }
 
+        public void AssignTransportUnit(int loadId, int unitId)
+        {
+            var conn = DbConnection.GetConnection();
+            var query = "UPDATE Loads SET TransportUnitId = @unit WHERE LoadId = @id";
+            var cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@unit", unitId);
+            cmd.Parameters.AddWithValue("@id", loadId);
+            cmd.ExecuteNonQuery();
+        }
+
 
     }
 

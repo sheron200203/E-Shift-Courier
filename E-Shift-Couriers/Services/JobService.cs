@@ -25,5 +25,16 @@ namespace E_Shift_Couriers.Services
             var isAdmin = Session.CurrentUser.Role == UserRole.Admin;
             return repo.GetAll(userId, isAdmin);
         }
+
+        public void UpdateStatus(int jobId, string status)
+        {
+            var userId = Session.CurrentUser.Id;
+            var isAdmin = Session.CurrentUser.Role == UserRole.Admin;
+            if(!isAdmin)
+            {
+                throw new UnauthorizedAccessException("Only admins can update job status.");
+            }
+            repo.UpdateStatus(jobId, status);
+        }
     }
 }
