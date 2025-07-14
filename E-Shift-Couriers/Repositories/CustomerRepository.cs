@@ -10,7 +10,7 @@ namespace E_Shift_Couriers.Repositories
         {
             var customers = new List<Customer>();
             var conn = DbConnection.GetConnection();
-            string query = "SELECT CustomerId, Name, Email, Phone FROM Customers";
+            string query = "SELECT CustomerId, Username, Name, Email, Phone FROM Customers";
             var cmd = new MySqlCommand(query, conn);
             var reader = cmd.ExecuteReader();
 
@@ -20,6 +20,7 @@ namespace E_Shift_Couriers.Repositories
                 {
                     Id = reader.GetInt32("CustomerId"),
                     Name = reader.GetString("Name"),
+                    Username  = reader.GetString("Username"),
                     Email = reader.GetString("Email"),
                     Phone = reader.GetString("Phone")
                 });
@@ -66,7 +67,7 @@ namespace E_Shift_Couriers.Repositories
         public Customer GetByUsername(string username)
         {
             var conn = DbConnection.GetConnection();
-            var cmd = new MySqlCommand("SELECT * FROM Customer WHERE Username = @username", conn);
+            var cmd = new MySqlCommand("SELECT * FROM Customers WHERE Username = @username", conn);
             cmd.Parameters.AddWithValue("@username", username);
 
             var reader = cmd.ExecuteReader();

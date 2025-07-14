@@ -27,6 +27,7 @@ namespace E_Shift_Couriers.Forms
         {
             var customers = _customerService.GetAllCustomers();
             dataGridView1.DataSource = customers;
+            dataGridView1.Columns["PasswordHash"].Visible = false;
         }
 
 

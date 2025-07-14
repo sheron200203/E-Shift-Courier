@@ -21,7 +21,7 @@ namespace E_Shift_Couriers.Repositories
         public Admin GetByUsername(string username)
         {
             var conn = DbConnection.GetConnection();
-            var cmd = new MySqlCommand("SELECT * FROM Admin WHERE Username = @username", conn);
+            var cmd = new MySqlCommand("SELECT * FROM Admins WHERE Username = @username", conn);
             cmd.Parameters.AddWithValue("@username", username);
 
             var reader = cmd.ExecuteReader();

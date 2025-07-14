@@ -13,14 +13,15 @@ namespace E_Shift_Couriers.Repositories
         public void Add(Job job)
         {
             var conn = DbConnection.GetConnection();
-            string query = "INSERT INTO Jobs (CustomerId, StartLocation, EndLocation, RequestedDate) " +
-                            "VALUES (@cid, @start, @end, @date)";
+            string query = "INSERT INTO Jobs (CustomerId, StartLocation, EndLocation, RequestedDate, Status) " +
+                            "VALUES (@cid, @start, @end, @date, @status)";
             var cmd = new MySqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@cid", job.CustomerId);
             cmd.Parameters.AddWithValue("@start", job.StartLocation);
             cmd.Parameters.AddWithValue("@end", job.EndLocation);
             cmd.Parameters.AddWithValue("@date", job.RequestedDate);
+            cmd.Parameters.AddWithValue("@status", job.Status);
             cmd.ExecuteNonQuery();
 
         }
@@ -41,6 +42,7 @@ namespace E_Shift_Couriers.Repositories
                 job.StartLocation = reader["StartLocation"].ToString();
                 job.EndLocation = reader["EndLocation"].ToString();
                 job.RequestedDate = Convert.ToDateTime(reader["RequestedDate"]);
+                job.Status = reader["Status"].ToString();
 
                 jobs.Add(job);
             }

@@ -50,27 +50,28 @@ namespace E_Shift_Couriers.Repositories
 
         public List<LoadView> GetAll()
         {
-            var loads = new List<LoadView>();
+            List<LoadView> loads = new List<LoadView>();
             var conn = DbConnection.GetConnection();
-            string query = @"SELECT 
-                        l.LoadId,
-                        l.Quantity,
-                        j.JobId,
-                        p.Name AS ProductName,
-                        t.LorryNumber,
-                        t.DriverName,
-                        t.AssistantName
-                    FROM Loads l
-                    JOIN Jobs j ON l.JobId = j.JobId
-                    JOIN Products p ON l.ProductId = p.ProductId
-                    JOIN TransportUnits t ON l.TransportUnitId = t.UnitId";
-            var cmd = new MySqlCommand(query, conn);
-            var reader = cmd.ExecuteReader();
+            string query = @"
+        SELECT 
+            l.LoadId,
+            l.JobId,
+            p.Name AS ProductName,
+            l.Quantity,
+            u.LorryNumber,
+            u.DriverName,
+            u.AssistantName
+        FROM Loads l
+        JOIN Products p ON l.ProductId = p.ProductId
+        JOIN TransportUnits u ON l.TransportUnitId = u.UnitId
+    ";
 
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);
+            var reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                var load = new LoadView
+                LoadView load = new LoadView
                 {
                     LoadId = Convert.ToInt32(reader["LoadId"]),
                     JobId = Convert.ToInt32(reader["JobId"]),
@@ -80,7 +81,6 @@ namespace E_Shift_Couriers.Repositories
                     DriverName = reader["DriverName"].ToString(),
                     AssistantName = reader["AssistantName"].ToString()
                 };
-
                 loads.Add(load);
             }
 
@@ -89,6 +89,7 @@ namespace E_Shift_Couriers.Repositories
 
             return loads;
         }
+
 
     }
 

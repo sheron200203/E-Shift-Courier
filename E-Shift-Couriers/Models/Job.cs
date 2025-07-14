@@ -13,6 +13,7 @@ namespace E_Shift_Couriers.Models
         public string StartLocation { get; set; }
         public string EndLocation { get; set; }
         public DateTime RequestedDate { get; set; }
+        public string Status { get; set; }
 
         public Job() { }
 

@@ -1,4 +1,5 @@
-﻿using E_Shift_Couriers.Models;
+﻿using E_Shift_Couriers.Enums;
+using E_Shift_Couriers.Models;
 using E_Shift_Couriers.Services;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,8 @@ namespace E_Shift_Couriers.Forms
                 CustomerId = customer.Id,
                 StartLocation = txtStart.Text,
                 EndLocation = txtEnd.Text,
-                RequestedDate = dtRequestedDate.Value
+                RequestedDate = dtRequestedDate.Value,
+                Status = JobStatus.Pending.ToString()
             };
 
             jobService.AddJob(job);
