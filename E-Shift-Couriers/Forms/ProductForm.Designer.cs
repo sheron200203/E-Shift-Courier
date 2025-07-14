@@ -39,16 +39,16 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(477, 43);
+            this.txtProductName.Location = new System.Drawing.Point(119, 38);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(100, 20);
+            this.txtProductName.Size = new System.Drawing.Size(235, 20);
             this.txtProductName.TabIndex = 0;
             this.txtProductName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dgvProducts
             // 
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(12, 168);
+            this.dgvProducts.Location = new System.Drawing.Point(12, 152);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.Size = new System.Drawing.Size(776, 270);
@@ -57,36 +57,40 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 114);
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(697, 92);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(91, 42);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtProductDesc
             // 
-            this.txtProductDesc.Location = new System.Drawing.Point(477, 69);
+            this.txtProductDesc.Location = new System.Drawing.Point(540, 41);
             this.txtProductDesc.Name = "txtProductDesc";
-            this.txtProductDesc.Size = new System.Drawing.Size(100, 20);
+            this.txtProductDesc.Size = new System.Drawing.Size(235, 20);
             this.txtProductDesc.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(387, 39);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(387, 69);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(428, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Description";
             // 

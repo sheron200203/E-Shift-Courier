@@ -36,28 +36,31 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(216, 181);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(189, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.Size = new System.Drawing.Size(107, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "Transport Unit";
             // 
             // cmbUnits
             // 
             this.cmbUnits.FormattingEnabled = true;
-            this.cmbUnits.Location = new System.Drawing.Point(323, 180);
+            this.cmbUnits.Location = new System.Drawing.Point(334, 178);
             this.cmbUnits.Name = "cmbUnits";
-            this.cmbUnits.Size = new System.Drawing.Size(121, 21);
+            this.cmbUnits.Size = new System.Drawing.Size(251, 21);
             this.cmbUnits.TabIndex = 25;
             // 
             // btnAssign
             // 
-            this.btnAssign.Location = new System.Drawing.Point(510, 247);
+            this.btnAssign.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.Location = new System.Drawing.Point(487, 236);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(75, 23);
+            this.btnAssign.Size = new System.Drawing.Size(98, 46);
             this.btnAssign.TabIndex = 24;
             this.btnAssign.Text = "Assign";
-            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.UseVisualStyleBackColor = false;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // AssignTransportUnitForm

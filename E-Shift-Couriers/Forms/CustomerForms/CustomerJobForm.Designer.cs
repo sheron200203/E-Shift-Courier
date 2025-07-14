@@ -42,35 +42,38 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(195, 132);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(46, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 19;
             this.label4.Text = "Job Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(414, 86);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(427, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 17;
             this.label2.Text = "End Location";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 86);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(105, 16);
             this.label1.TabIndex = 16;
             this.label1.Text = "Start Location";
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(499, 86);
+            this.txtEnd.Location = new System.Drawing.Point(533, 79);
             this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(100, 20);
+            this.txtEnd.Size = new System.Drawing.Size(255, 20);
             this.txtEnd.TabIndex = 15;
             // 
             // dgvJobs
@@ -84,26 +87,29 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(557, 127);
+            this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(702, 173);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 23);
+            this.Add.Size = new System.Drawing.Size(86, 31);
             this.Add.TabIndex = 13;
             this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtRequestedDate
             // 
-            this.dtRequestedDate.Location = new System.Drawing.Point(293, 127);
+            this.dtRequestedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtRequestedDate.Location = new System.Drawing.Point(124, 117);
             this.dtRequestedDate.Name = "dtRequestedDate";
-            this.dtRequestedDate.Size = new System.Drawing.Size(200, 20);
+            this.dtRequestedDate.Size = new System.Drawing.Size(255, 22);
             this.dtRequestedDate.TabIndex = 12;
             // 
             // txtStart
             // 
-            this.txtStart.Location = new System.Drawing.Point(296, 81);
+            this.txtStart.Location = new System.Drawing.Point(124, 79);
             this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(100, 20);
+            this.txtStart.Size = new System.Drawing.Size(255, 20);
             this.txtStart.TabIndex = 11;
             // 
             // CustomerJobForm

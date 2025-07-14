@@ -42,70 +42,75 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 131);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(91, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 25;
             this.label4.Text = "Quantity";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(344, 64);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(413, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 23;
             this.label2.Text = "Products";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 64);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 15);
+            this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 22;
             this.label1.Text = "Jobs";
             // 
             // cmbProduct
             // 
             this.cmbProduct.FormattingEnabled = true;
-            this.cmbProduct.Location = new System.Drawing.Point(451, 64);
+            this.cmbProduct.Location = new System.Drawing.Point(500, 64);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.Size = new System.Drawing.Size(121, 21);
+            this.cmbProduct.Size = new System.Drawing.Size(213, 21);
             this.cmbProduct.TabIndex = 20;
             // 
             // dgvLoads
             // 
             this.dgvLoads.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoads.Location = new System.Drawing.Point(90, 240);
+            this.dgvLoads.Location = new System.Drawing.Point(12, 190);
             this.dgvLoads.Name = "dgvLoads";
             this.dgvLoads.RowHeadersWidth = 51;
-            this.dgvLoads.Size = new System.Drawing.Size(623, 150);
+            this.dgvLoads.Size = new System.Drawing.Size(776, 227);
             this.dgvLoads.TabIndex = 19;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(324, 123);
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(701, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 33);
             this.button1.TabIndex = 18;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(165, 126);
+            this.txtQuantity.Location = new System.Drawing.Point(169, 114);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(205, 20);
             this.txtQuantity.TabIndex = 17;
             // 
             // cmbJob
             // 
             this.cmbJob.FormattingEnabled = true;
-            this.cmbJob.Location = new System.Drawing.Point(165, 61);
+            this.cmbJob.Location = new System.Drawing.Point(169, 68);
             this.cmbJob.Name = "cmbJob";
-            this.cmbJob.Size = new System.Drawing.Size(121, 21);
+            this.cmbJob.Size = new System.Drawing.Size(205, 21);
             this.cmbJob.TabIndex = 16;
             // 
             // CustomerLoadForm

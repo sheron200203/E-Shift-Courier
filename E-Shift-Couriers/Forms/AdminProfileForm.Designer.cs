@@ -41,57 +41,62 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(399, 86);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(159, 20);
             this.txtUsername.TabIndex = 0;
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(399, 145);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtNewPassword.Size = new System.Drawing.Size(159, 20);
             this.txtNewPassword.TabIndex = 1;
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(399, 210);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(159, 20);
             this.txtConfirmPassword.TabIndex = 2;
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(399, 271);
+            this.Update.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(459, 297);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.Size = new System.Drawing.Size(99, 51);
             this.Update.TabIndex = 3;
             this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
+            this.Update.UseVisualStyleBackColor = false;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 15);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "New Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 215);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(231, 211);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 15);
+            this.label2.Size = new System.Drawing.Size(135, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Confirm Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(254, 86);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(287, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 15);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Username";
             // 

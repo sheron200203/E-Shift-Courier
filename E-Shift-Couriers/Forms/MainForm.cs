@@ -58,7 +58,8 @@ namespace E_Shift_Couriers.Forms
             reportsForm.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             var user = Session.CurrentUser;
             if (user == null || user.Role != UserRole.Admin)

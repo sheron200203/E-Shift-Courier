@@ -42,76 +42,83 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(176, 228);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(221, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Job Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(176, 131);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(221, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
+            this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Customers";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(395, 182);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(201, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "End Location";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 182);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(198, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(105, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Start Location";
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(480, 182);
+            this.txtEnd.Location = new System.Drawing.Point(322, 202);
             this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(100, 20);
+            this.txtEnd.Size = new System.Drawing.Size(242, 20);
             this.txtEnd.TabIndex = 14;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(480, 310);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(468, 337);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(96, 46);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dtRequestedDate
             // 
-            this.dtRequestedDate.Location = new System.Drawing.Point(274, 223);
+            this.dtRequestedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtRequestedDate.Location = new System.Drawing.Point(322, 257);
             this.dtRequestedDate.Name = "dtRequestedDate";
-            this.dtRequestedDate.Size = new System.Drawing.Size(200, 20);
+            this.dtRequestedDate.Size = new System.Drawing.Size(242, 22);
             this.dtRequestedDate.TabIndex = 12;
             // 
             // txtStart
             // 
-            this.txtStart.Location = new System.Drawing.Point(277, 177);
+            this.txtStart.Location = new System.Drawing.Point(322, 140);
             this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(100, 20);
+            this.txtStart.Size = new System.Drawing.Size(242, 20);
             this.txtStart.TabIndex = 11;
             // 
             // cmbCustomer
             // 
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(277, 131);
+            this.cmbCustomer.Location = new System.Drawing.Point(322, 91);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(121, 21);
+            this.cmbCustomer.Size = new System.Drawing.Size(242, 21);
             this.cmbCustomer.TabIndex = 10;
             // 
             // AddJobForm

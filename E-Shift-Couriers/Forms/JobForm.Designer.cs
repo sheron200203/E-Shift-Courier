@@ -32,15 +32,16 @@
             this.dgvJobs = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFilter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCustomer
             // 
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(299, 106);
+            this.cmbCustomer.Location = new System.Drawing.Point(150, 45);
             this.cmbCustomer.Name = "cmbCustomer";
-            this.cmbCustomer.Size = new System.Drawing.Size(121, 21);
+            this.cmbCustomer.Size = new System.Drawing.Size(291, 21);
             this.cmbCustomer.TabIndex = 0;
             this.cmbCustomer.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -57,28 +58,43 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(198, 106);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
+            this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Customers";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(503, 106);
+            this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.Location = new System.Drawing.Point(477, 43);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
             this.btnFilter.TabIndex = 10;
             this.btnFilter.Text = "Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(701, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 40);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // JobForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvJobs);
@@ -97,5 +113,6 @@
         private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button button1;
     }
 }

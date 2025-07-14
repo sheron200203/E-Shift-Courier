@@ -38,13 +38,6 @@ namespace E_Shift_Couriers.Forms
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddJobForm addForm = new AddJobForm();
-            addForm.FormClosed += (s, args) => LoadJobs(); // Refresh table when add form closes
-            addForm.ShowDialog();
-        }
-
         private void LoadCustomers()
         {
             cmbCustomer.DataSource = null;
@@ -92,6 +85,13 @@ namespace E_Shift_Couriers.Forms
             int customerId = (int)cmbCustomer.SelectedValue;
             var jobs = jobService.filterJobsByCustomer(customerId);
             dgvJobs.DataSource = jobs;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AddJobForm addForm = new AddJobForm();
+            addForm.FormClosed += (s, args) => LoadJobs(); // Refresh table when add form closes
+            addForm.ShowDialog();
         }
     }
 }
