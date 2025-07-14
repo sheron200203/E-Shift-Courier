@@ -1,4 +1,6 @@
-﻿using E_Shift_Couriers.Enums;
+﻿using E_Shift_Couriers.Auth;
+using E_Shift_Couriers.Enums;
+using E_Shift_Couriers.Forms.CustomerForms;
 using E_Shift_Couriers.Models;
 using E_Shift_Couriers.Repositories;
 using E_Shift_Couriers.Services;
@@ -39,6 +41,13 @@ namespace E_Shift_Couriers.Forms
                 return;
             }
 
+            Session.CurrentUser = new User
+            {
+                Id = user.Id,
+                Username = user.Username, 
+                Role = user.Role
+            };
+
             if (user.Role == UserRole.Admin)
             {
                 var adminDashboard = new MainForm();
@@ -48,6 +57,8 @@ namespace E_Shift_Couriers.Forms
             {
                 //var customerDashboard = new CustomerDashboardForm(user as Customer);
                 //customerDashboard.Show();
+                var customerDashboard = new CustomerDashboardForm();
+                customerDashboard.Show();
             }
 
             this.Hide();

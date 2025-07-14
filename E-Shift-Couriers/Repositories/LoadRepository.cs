@@ -48,10 +48,12 @@ namespace E_Shift_Couriers.Repositories
             return loads;
         }
 
-        public List<LoadView> GetAll()
+
+        public List<LoadView> GetAll(int userId, bool isAdmin)
         {
-            List<LoadView> loads = new List<LoadView>();
+            var loads = new List<LoadView>();
             var conn = DbConnection.GetConnection();
+
             string query = @"
         SELECT 
             l.LoadId,
@@ -63,15 +65,25 @@ namespace E_Shift_Couriers.Repositories
             u.AssistantName
         FROM Loads l
         JOIN Products p ON l.ProductId = p.ProductId
-        JOIN TransportUnits u ON l.TransportUnitId = u.UnitId
+        LEFT JOIN TransportUnits u ON l.TransportUnitId = u.UnitId
+        JOIN Jobs j ON l.JobId = j.JobId
     ";
 
-            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);
-            var reader = cmd.ExecuteReader();
+            if (!isAdmin)
+            {
+                query += " WHERE j.CustomerId = @userId";
+            }
 
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);
+            if (!isAdmin)
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+            }
+
+            var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                LoadView load = new LoadView
+                loads.Add(new LoadView
                 {
                     LoadId = Convert.ToInt32(reader["LoadId"]),
                     JobId = Convert.ToInt32(reader["JobId"]),
@@ -80,8 +92,7 @@ namespace E_Shift_Couriers.Repositories
                     LorryNumber = reader["LorryNumber"].ToString(),
                     DriverName = reader["DriverName"].ToString(),
                     AssistantName = reader["AssistantName"].ToString()
-                };
-                loads.Add(load);
+                });
             }
 
             reader.Close();

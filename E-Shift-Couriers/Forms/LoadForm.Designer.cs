@@ -49,6 +49,7 @@
             this.dgvLoads.RowHeadersWidth = 51;
             this.dgvLoads.Size = new System.Drawing.Size(623, 150);
             this.dgvLoads.TabIndex = 9;
+            this.dgvLoads.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoads_CellContentClick);
             // 
             // button1
             // 
@@ -66,6 +67,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
             this.txtQuantity.TabIndex = 6;
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // cmbJob
             // 
@@ -74,6 +76,7 @@
             this.cmbJob.Name = "cmbJob";
             this.cmbJob.Size = new System.Drawing.Size(121, 21);
             this.cmbJob.TabIndex = 5;
+            this.cmbJob.SelectedIndexChanged += new System.EventHandler(this.cmbJob_SelectedIndexChanged);
             // 
             // cmbProduct
             // 
@@ -82,6 +85,7 @@
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(121, 21);
             this.cmbProduct.TabIndex = 10;
+            this.cmbProduct.SelectedIndexChanged += new System.EventHandler(this.cmbProduct_SelectedIndexChanged);
             // 
             // cmbUnit
             // 
@@ -90,6 +94,7 @@
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(121, 21);
             this.cmbUnit.TabIndex = 11;
+            this.cmbUnit.SelectedIndexChanged += new System.EventHandler(this.cmbUnit_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -99,6 +104,7 @@
             this.label1.Size = new System.Drawing.Size(33, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "Jobs";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -108,6 +114,7 @@
             this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Products";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -117,6 +124,7 @@
             this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "Transport Unit";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -126,6 +134,7 @@
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Quantity";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // LoadForm
             // 

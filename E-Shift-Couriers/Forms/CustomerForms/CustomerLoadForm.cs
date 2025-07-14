@@ -10,25 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Shift_Couriers.Forms
+namespace E_Shift_Couriers.Forms.CustomerForms
 {
-    public partial class LoadForm : Form
+    public partial class CustomerLoadForm : Form
     {
+      
         private LoadService loadService = new LoadService();
         private JobService jobService = new JobService();
         private ProductService productService = new ProductService();
-        private TransportUnitService unitService = new TransportUnitService();
 
-        public LoadForm()
+        public CustomerLoadForm()
         {
             InitializeComponent();
             LoadCombos();
             LoadLoads();
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (cmbJob.SelectedItem == null || cmbProduct.SelectedItem == null || cmbUnit.SelectedItem == null)
+            if (cmbJob.SelectedItem == null || cmbProduct.SelectedItem == null)
             {
                 MessageBox.Show("Select all fields.");
                 return;
@@ -45,7 +45,7 @@ namespace E_Shift_Couriers.Forms
             {
                 JobId = (int)cmbJob.SelectedValue,
                 ProductId = (int)cmbProduct.SelectedValue,
-                TransportUnitId = (int)cmbUnit.SelectedValue,
+                TransportUnitId = null,
                 Quantity = quantity
             };
 
@@ -60,7 +60,7 @@ namespace E_Shift_Couriers.Forms
             var jobs = jobService.GetAllJobs();
             cmbJob.DataSource = null;
             cmbJob.DataSource = jobs;
-            cmbJob.DisplayMember = "JobId"; 
+            cmbJob.DisplayMember = "JobId";
             cmbJob.ValueMember = "JobId";
 
             // Load Products
@@ -69,19 +69,12 @@ namespace E_Shift_Couriers.Forms
             cmbProduct.DataSource = products;
             cmbProduct.DisplayMember = "Name";
             cmbProduct.ValueMember = "ProductId";
-
-            // Load Transport Units
-            var units = unitService.GetAllUnits();
-            cmbUnit.DataSource = null;
-            cmbUnit.DataSource = units;
-            cmbUnit.DisplayMember = "LorryNumber";
-            cmbUnit.ValueMember = "UnitId";
         }
 
         private void LoadLoads()
         {
             // Get loads with joined display info instead of just IDs
-            var loads = loadService.GetAllLoads();  
+            var loads = loadService.GetAllLoads();
 
             dgvLoads.DataSource = null;
             dgvLoads.DataSource = loads;
@@ -89,51 +82,5 @@ namespace E_Shift_Couriers.Forms
             dgvLoads.Columns["LoadId"].Visible = false;
             dgvLoads.Columns["JobId"].Visible = false;
         }
-
-        private void dgvLoads_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtQuantity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbJob_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbProduct_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbUnit_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-
