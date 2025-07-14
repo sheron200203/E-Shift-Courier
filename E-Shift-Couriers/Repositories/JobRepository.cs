@@ -97,5 +97,38 @@ JOIN Customers c ON j.CustomerId = c.CustomerId";
             cmd.ExecuteNonQuery();
         }
 
+        public List<JobView> GetJobsByCustomer(int customerId)
+        {
+            var jobs = new List<JobView>();
+            var conn = DbConnection.GetConnection();
+            var query = @"
+        SELECT j.JobId, j.JobCode, j.StartLocation, j.EndLocation, j.RequestedDate, j.Status, c.Name as CustomerName
+        FROM Jobs j
+        JOIN Customers c ON j.CustomerId = c.CustomerId
+        WHERE j.CustomerId = @customerId";
+
+            var cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@customerId", customerId);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                jobs.Add(new JobView
+                {
+                    JobId = Convert.ToInt32(reader["JobId"]),
+                    JobCode = reader["JobCode"].ToString(),
+                    CustomerName = reader["CustomerName"].ToString(),
+                    StartLocation = reader["StartLocation"].ToString(),
+                    EndLocation = reader["EndLocation"].ToString(),
+                    RequestedDate = Convert.ToDateTime(reader["RequestedDate"]),
+                    Status = reader["Status"].ToString()
+                });
+            }
+
+            reader.Close();
+            conn.Close();
+            return jobs;
+        }
+
     }
 }

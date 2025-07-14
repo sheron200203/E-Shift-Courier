@@ -107,6 +107,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddJobForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddJobForm.Designer.cs">
+      <DependentUpon>AddJobForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddLoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     <Compile Include="Utils\CodeGenerator.cs" />
     <Compile Include="Utils\PasswordHasher.cs" />
     <Compile Include="Utils\Validator.cs" />
+    <EmbeddedResource Include="Forms\AddJobForm.resx">
+      <DependentUpon>AddJobForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLoadForm.resx">
       <DependentUpon>AddLoadForm.cs</DependentUpon>
     </EmbeddedResource>

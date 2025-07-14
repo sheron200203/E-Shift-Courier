@@ -38,6 +38,7 @@ namespace E_Shift_Couriers.Forms
         {
             dgvProducts.DataSource = null;
             dgvProducts.DataSource = productService.GetAllProducts();
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 

@@ -54,6 +54,7 @@ namespace E_Shift_Couriers.Forms
             }
 
             dgvLoads.Columns["Assign"].DisplayIndex = dgvLoads.Columns.Count - 1;
+            dgvLoads.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 

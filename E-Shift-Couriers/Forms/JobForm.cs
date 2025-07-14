@@ -40,26 +40,9 @@ namespace E_Shift_Couriers.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cmbCustomer.SelectedItem == null)
-            {
-                MessageBox.Show("Select a customer.");
-                return;
-            }
-
-            var customer = (Customer)cmbCustomer.SelectedItem;
-
-            Job job = new Job
-            {
-                CustomerId = customer.Id,
-                StartLocation = txtStart.Text,
-                EndLocation = txtEnd.Text,
-                RequestedDate = dtRequestedDate.Value,
-                Status = JobStatus.Pending.ToString()
-            };
-
-            jobService.AddJob(job);
-            MessageBox.Show("Job created.");
-            LoadJobs();
+            AddJobForm addForm = new AddJobForm();
+            addForm.FormClosed += (s, args) => LoadJobs(); // Refresh table when add form closes
+            addForm.ShowDialog();
         }
 
         private void LoadCustomers()
@@ -75,6 +58,7 @@ namespace E_Shift_Couriers.Forms
             dgvJobs.Columns.Clear(); // Clear old columns
             dgvJobs.DataSource = null;
             dgvJobs.DataSource = jobService.GetAllJobs();
+            dgvJobs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             var btnCol = new DataGridViewButtonColumn();
             btnCol.Name = "StatusAction";
@@ -90,32 +74,8 @@ namespace E_Shift_Couriers.Forms
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEnd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -125,9 +85,13 @@ namespace E_Shift_Couriers.Forms
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnFilter_Click(object sender, EventArgs e)
         {
+            if (cmbCustomer.SelectedItem == null) return;
 
+            int customerId = (int)cmbCustomer.SelectedValue;
+            var jobs = jobService.filterJobsByCustomer(customerId);
+            dgvJobs.DataSource = jobs;
         }
     }
 }

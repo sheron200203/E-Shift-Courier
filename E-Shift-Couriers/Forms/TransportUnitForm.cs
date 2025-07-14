@@ -42,6 +42,7 @@ namespace E_Shift_Couriers.Forms
         {
             dgvUnits.DataSource = null;
             dgvUnits.DataSource = unitService.GetAllUnits();
+            dgvUnits.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

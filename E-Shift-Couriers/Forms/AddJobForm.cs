@@ -1,5 +1,4 @@
-﻿using E_Shift_Couriers.Auth;
-using E_Shift_Couriers.Enums;
+﻿using E_Shift_Couriers.Enums;
 using E_Shift_Couriers.Models;
 using E_Shift_Couriers.Services;
 using System;
@@ -12,23 +11,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Shift_Couriers.Forms.CustomerForms
+namespace E_Shift_Couriers.Forms
 {
-    public partial class CustomerJobForm : Form
+    public partial class AddJobForm : Form
     {
         private JobService jobService = new JobService();
         private CustomerService customerService = new CustomerService();
-        public CustomerJobForm()
+        public AddJobForm()
         {
             InitializeComponent();
-            LoadJobs();
+            LoadCustomers();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (cmbCustomer.SelectedItem == null)
+            {
+                MessageBox.Show("Select a customer.");
+                return;
+            }
+
+            var customer = (Customer)cmbCustomer.SelectedItem;
+
             Job job = new Job
             {
-                CustomerId = Session.CurrentUser.Id,
+                CustomerId = customer.Id,
                 StartLocation = txtStart.Text,
                 EndLocation = txtEnd.Text,
                 RequestedDate = dtRequestedDate.Value,
@@ -37,15 +45,16 @@ namespace E_Shift_Couriers.Forms.CustomerForms
 
             jobService.AddJob(job);
             MessageBox.Show("Job created.");
-            LoadJobs();
+            this.Close();
         }
 
-        private void LoadJobs()
+        private void LoadCustomers()
         {
-            dgvJobs.DataSource = null;
-            dgvJobs.DataSource = jobService.GetAllJobs();
-            dgvJobs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            cmbCustomer.DataSource = null;
+            cmbCustomer.DataSource = customerService.GetAllCustomers();
+            cmbCustomer.DisplayMember = "Name";
+            cmbCustomer.ValueMember = "ID";
         }
+
     }
 }

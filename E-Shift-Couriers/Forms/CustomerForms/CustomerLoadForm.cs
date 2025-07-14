@@ -84,6 +84,7 @@ namespace E_Shift_Couriers.Forms.CustomerForms
             dgvLoads.Columns["LorryNumber"].Visible = false;
             dgvLoads.Columns["DriverName"].Visible = false;
             dgvLoads.Columns["AssistantName"].Visible = false;
+            dgvLoads.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
