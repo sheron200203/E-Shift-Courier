@@ -23,7 +23,7 @@ namespace E_Shift_Couriers.Forms
         {
             InitializeComponent();
             var conn = DbConnection.GetConnection();
-            var adminRepo = new AdminRepository(conn.ToString());
+            var adminRepo = new AdminRepository();
             var customerRepo = new CustomerRepository();
             _authService = new AuthService(adminRepo, customerRepo);
         }

@@ -11,13 +11,6 @@ namespace E_Shift_Couriers.Repositories
 {
     public class AdminRepository
     {
-        private readonly string connectionString;
-
-        public AdminRepository(string connStr)
-        {
-            connectionString = connStr;
-        }
-
         public Admin GetByUsername(string username)
         {
             var conn = DbConnection.GetConnection();
@@ -36,5 +29,49 @@ namespace E_Shift_Couriers.Repositories
             }
             return null;
         }
+
+        public bool UpdateAdmin(Admin admin)
+        {
+            using (var conn = DbConnection.GetConnection())
+            {
+                string query = "UPDATE Admins SET Username = @username, passwordHash = @password WHERE AdminId = @id";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", admin.Username);
+                    cmd.Parameters.AddWithValue("@password", admin.PasswordHash);
+                    cmd.Parameters.AddWithValue("@id", admin.Id);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public Admin GetById(int id)
+        {
+            using (var conn = DbConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Admins WHERE AdminId = @id";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Admin
+                            {
+                                Id = reader.GetInt32(reader.GetOrdinal("AdminId")),
+                                Username = reader.GetString(reader.GetOrdinal("Username")),
+                                PasswordHash = reader.GetString(reader.GetOrdinal("passwordHash"))
+                                
+                            };
+                        }
+                    }
+                }
+            }
+            return null; 
+        }
+
     }
 }
