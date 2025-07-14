@@ -8,16 +8,17 @@ using System.Threading.Tasks;
 
 namespace E_Shift_Couriers.Services
 {
-    public class JobService
-    {
-        private readonly JobRepository repo = new JobRepository();
 
-        public void AddJob(Job job)
+    public class TransportUnitService
+    {
+        private readonly TransportUnitRepository repo = new TransportUnitRepository();
+
+        public void AddUnit(TransportUnit unit)
         {
-            repo.Add(job);
+            repo.Add(unit);
         }
 
-        public List<Job> GetAllJobs()
+        public List<TransportUnit> GetAllUnits()
         {
             return repo.GetAll();
         }

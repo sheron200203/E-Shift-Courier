@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace E_Shift_Couriers.Services
 {
-    public class JobService
+    public class ProductService
     {
-        private readonly JobRepository repo = new JobRepository();
+        private readonly ProductRepository repo = new ProductRepository();
 
-        public void AddJob(Job job)
+        public void AddProduct(Product product)
         {
-            repo.Add(job);
+            repo.Add(product);
         }
 
-        public List<Job> GetAllJobs()
+        public List<Product> GetAllProducts()
         {
             return repo.GetAll();
         }

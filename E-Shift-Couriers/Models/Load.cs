@@ -8,9 +8,10 @@ namespace E_Shift_Couriers.Models
 {
     public class Load
     {
-        public int ID { get; set; }
-        public int JobID { get; set; }
-        public int ProductID { get; set; }
-        public int CreatedByAdminID { get; set; }
+        public int LoadId { get; set; }
+        public int JobId { get; set; }
+        public int ProductId { get; set; }
+        public int TransportUnitId { get; set; }
+        public int Quantity { get; set; }
     }
 }

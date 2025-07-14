@@ -17,7 +17,7 @@ namespace E_Shift_Couriers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerForm());
+            Application.Run(new MainForm());
         }
     }
 }

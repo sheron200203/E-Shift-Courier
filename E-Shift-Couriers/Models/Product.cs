@@ -8,11 +8,8 @@ namespace E_Shift_Couriers.Models
 {
     public class Product
     {
-        public int ID { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
-        public double Weight { get; set; }
-        public double Size { get; set; }
         public string Description { get; set; }
-        public bool IsFragile { get; set; }
     }
 }

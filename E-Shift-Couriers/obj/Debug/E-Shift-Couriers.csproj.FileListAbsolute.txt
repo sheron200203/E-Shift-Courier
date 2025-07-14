@@ -42,3 +42,8 @@ C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\bin\Debug\System.Ru
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E-Shift-.5A55A336.Up2Date
 C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.CustomerForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.MainForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.JobForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.LoadForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.ProductForm.resources
+C:\Users\USER\source\repos\E-Shift-Couriers\E-Shift-Couriers\obj\Debug\E_Shift_Couriers.Forms.TransportUnitForm.resources

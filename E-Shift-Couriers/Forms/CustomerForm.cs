@@ -40,8 +40,18 @@ namespace E_Shift_Couriers.Forms
             };
 
             _customerService.AddCustomer(customer);
+            ClearFields();
             LoadCustomers();
             MessageBox.Show("Customer added!");
         }
+
+        private void ClearFields()
+        {
+            txtName.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+        }
+
+
     }
 }

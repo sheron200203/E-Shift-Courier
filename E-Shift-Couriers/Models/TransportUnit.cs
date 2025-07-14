@@ -8,11 +8,10 @@ namespace E_Shift_Couriers.Models
 {
     public class TransportUnit
     {
-        public int ID { get; set; }
-        public string LorryName { get; set; }
-        public string PlateNo { get; set; }
+        public int UnitId { get; set; }
+        public string LorryNumber { get; set; }
         public string DriverName { get; set; }
         public string AssistantName { get; set; }
-        public string ContainerID { get; set; }
+        public string ContainerType { get; set; }
     }
 }
