@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +45,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 117);
+            this.label4.Location = new System.Drawing.Point(61, 144);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 16);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 19;
             this.label4.Text = "Job Date";
             // 
@@ -55,9 +57,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(427, 79);
+            this.label2.Location = new System.Drawing.Point(569, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 17;
             this.label2.Text = "End Location";
             // 
@@ -66,28 +69,41 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 79);
+            this.label1.Location = new System.Drawing.Point(17, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 16);
+            this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 16;
             this.label1.Text = "Start Location";
             // 
             // txtEnd
             // 
             this.txtEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEnd.Location = new System.Drawing.Point(533, 79);
+            this.txtEnd.Location = new System.Drawing.Point(711, 97);
+            this.txtEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEnd.Name = "txtEnd";
-            this.txtEnd.Size = new System.Drawing.Size(255, 20);
+            this.txtEnd.Size = new System.Drawing.Size(339, 22);
             this.txtEnd.TabIndex = 15;
             // 
             // dgvJobs
             // 
             this.dgvJobs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvJobs.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvJobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.Location = new System.Drawing.Point(12, 221);
+            this.dgvJobs.Location = new System.Drawing.Point(16, 272);
+            this.dgvJobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvJobs.Name = "dgvJobs";
             this.dgvJobs.RowHeadersWidth = 51;
-            this.dgvJobs.Size = new System.Drawing.Size(776, 217);
+            this.dgvJobs.Size = new System.Drawing.Size(1035, 267);
             this.dgvJobs.TabIndex = 14;
             // 
             // Add
@@ -95,9 +111,10 @@
             this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(702, 173);
+            this.Add.Location = new System.Drawing.Point(936, 213);
+            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(86, 31);
+            this.Add.Size = new System.Drawing.Size(115, 38);
             this.Add.TabIndex = 13;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
@@ -107,24 +124,26 @@
             // 
             this.dtRequestedDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtRequestedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtRequestedDate.Location = new System.Drawing.Point(124, 117);
+            this.dtRequestedDate.Location = new System.Drawing.Point(165, 144);
+            this.dtRequestedDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtRequestedDate.Name = "dtRequestedDate";
-            this.dtRequestedDate.Size = new System.Drawing.Size(255, 22);
+            this.dtRequestedDate.Size = new System.Drawing.Size(339, 22);
             this.dtRequestedDate.TabIndex = 12;
             // 
             // txtStart
             // 
             this.txtStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStart.Location = new System.Drawing.Point(124, 79);
+            this.txtStart.Location = new System.Drawing.Point(165, 97);
+            this.txtStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(255, 20);
+            this.txtStart.Size = new System.Drawing.Size(339, 22);
             this.txtStart.TabIndex = 11;
             // 
             // CustomerJobForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,7 +152,8 @@
             this.Controls.Add(this.Add);
             this.Controls.Add(this.dtRequestedDate);
             this.Controls.Add(this.txtStart);
-            this.MinimumSize = new System.Drawing.Size(818, 497);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1085, 601);
             this.Name = "CustomerJobForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerJobForm";

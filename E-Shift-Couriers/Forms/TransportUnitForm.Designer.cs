@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvUnits = new System.Windows.Forms.DataGridView();
             this.txtLorry = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(907, 77);
+            this.button1.Location = new System.Drawing.Point(909, 59);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 54);
@@ -59,23 +59,23 @@
             // 
             // dgvUnits
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvUnits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvUnits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUnits.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvUnits.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUnits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUnits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUnits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUnits.EnableHeadersVisualStyles = false;
             this.dgvUnits.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvUnits.Location = new System.Drawing.Point(35, 273);
+            this.dgvUnits.Location = new System.Drawing.Point(37, 255);
             this.dgvUnits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUnits.Name = "dgvUnits";
             this.dgvUnits.RowHeadersWidth = 51;
@@ -86,7 +86,7 @@
             // txtLorry
             // 
             this.txtLorry.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLorry.Location = new System.Drawing.Point(176, 163);
+            this.txtLorry.Location = new System.Drawing.Point(178, 145);
             this.txtLorry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLorry.Name = "txtLorry";
             this.txtLorry.Size = new System.Drawing.Size(296, 22);
@@ -96,7 +96,7 @@
             // txtDriver
             // 
             this.txtDriver.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDriver.Location = new System.Drawing.Point(176, 209);
+            this.txtDriver.Location = new System.Drawing.Point(178, 191);
             this.txtDriver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDriver.Name = "txtDriver";
             this.txtDriver.Size = new System.Drawing.Size(296, 22);
@@ -105,7 +105,7 @@
             // txtAssistant
             // 
             this.txtAssistant.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAssistant.Location = new System.Drawing.Point(739, 155);
+            this.txtAssistant.Location = new System.Drawing.Point(741, 137);
             this.txtAssistant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAssistant.Name = "txtAssistant";
             this.txtAssistant.Size = new System.Drawing.Size(296, 22);
@@ -114,7 +114,7 @@
             // txtContainer
             // 
             this.txtContainer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContainer.Location = new System.Drawing.Point(739, 211);
+            this.txtContainer.Location = new System.Drawing.Point(741, 191);
             this.txtContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContainer.Name = "txtContainer";
             this.txtContainer.Size = new System.Drawing.Size(296, 22);
@@ -125,7 +125,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 164);
+            this.label1.Location = new System.Drawing.Point(65, 146);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 16);
@@ -137,7 +137,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(101, 215);
+            this.label2.Location = new System.Drawing.Point(103, 197);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
@@ -149,7 +149,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(602, 162);
+            this.label3.Location = new System.Drawing.Point(604, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 16);
@@ -161,7 +161,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(602, 214);
+            this.label4.Location = new System.Drawing.Point(604, 194);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 16);
