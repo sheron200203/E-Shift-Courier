@@ -93,5 +93,10 @@ namespace E_Shift_Couriers.Forms
             addForm.FormClosed += (s, args) => LoadJobs(); // Refresh table when add form closes
             addForm.ShowDialog();
         }
+
+        private void JobForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

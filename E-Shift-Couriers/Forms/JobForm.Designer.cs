@@ -38,6 +38,7 @@
             // 
             // cmbCustomer
             // 
+            this.cmbCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbCustomer.FormattingEnabled = true;
             this.cmbCustomer.Location = new System.Drawing.Point(150, 45);
             this.cmbCustomer.Name = "cmbCustomer";
@@ -47,6 +48,7 @@
             // 
             // dgvJobs
             // 
+            this.dgvJobs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobs.Location = new System.Drawing.Point(12, 144);
             this.dgvJobs.Name = "dgvJobs";
@@ -57,6 +59,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 46);
@@ -68,7 +71,9 @@
             // 
             // btnFilter
             // 
+            this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Location = new System.Drawing.Point(477, 43);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
@@ -79,6 +84,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(701, 89);
@@ -99,8 +105,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvJobs);
             this.Controls.Add(this.cmbCustomer);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "JobForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JobForm";
+            this.Load += new System.EventHandler(this.JobForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

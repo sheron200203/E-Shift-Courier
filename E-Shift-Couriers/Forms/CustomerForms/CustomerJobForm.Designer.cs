@@ -41,6 +41,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(46, 117);
@@ -51,6 +52,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(427, 79);
@@ -61,6 +63,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 79);
@@ -71,6 +74,7 @@
             // 
             // txtEnd
             // 
+            this.txtEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEnd.Location = new System.Drawing.Point(533, 79);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(255, 20);
@@ -78,6 +82,7 @@
             // 
             // dgvJobs
             // 
+            this.dgvJobs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobs.Location = new System.Drawing.Point(12, 221);
             this.dgvJobs.Name = "dgvJobs";
@@ -87,6 +92,7 @@
             // 
             // Add
             // 
+            this.Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.Location = new System.Drawing.Point(702, 173);
@@ -99,6 +105,7 @@
             // 
             // dtRequestedDate
             // 
+            this.dtRequestedDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtRequestedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtRequestedDate.Location = new System.Drawing.Point(124, 117);
             this.dtRequestedDate.Name = "dtRequestedDate";
@@ -107,6 +114,7 @@
             // 
             // txtStart
             // 
+            this.txtStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStart.Location = new System.Drawing.Point(124, 79);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(255, 20);
@@ -125,7 +133,9 @@
             this.Controls.Add(this.Add);
             this.Controls.Add(this.dtRequestedDate);
             this.Controls.Add(this.txtStart);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "CustomerJobForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerJobForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
             this.ResumeLayout(false);

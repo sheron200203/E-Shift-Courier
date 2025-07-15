@@ -41,6 +41,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(221, 261);
@@ -51,6 +52,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(221, 96);
@@ -61,6 +63,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(201, 206);
@@ -71,6 +74,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(198, 144);
@@ -81,6 +85,7 @@
             // 
             // txtEnd
             // 
+            this.txtEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEnd.Location = new System.Drawing.Point(322, 202);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(242, 20);
@@ -88,6 +93,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(468, 337);
@@ -100,6 +106,7 @@
             // 
             // dtRequestedDate
             // 
+            this.dtRequestedDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtRequestedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtRequestedDate.Location = new System.Drawing.Point(322, 257);
             this.dtRequestedDate.Name = "dtRequestedDate";
@@ -108,6 +115,7 @@
             // 
             // txtStart
             // 
+            this.txtStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStart.Location = new System.Drawing.Point(322, 140);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(242, 20);
@@ -115,6 +123,7 @@
             // 
             // cmbCustomer
             // 
+            this.cmbCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbCustomer.FormattingEnabled = true;
             this.cmbCustomer.Location = new System.Drawing.Point(322, 91);
             this.cmbCustomer.Name = "cmbCustomer";
@@ -135,7 +144,9 @@
             this.Controls.Add(this.dtRequestedDate);
             this.Controls.Add(this.txtStart);
             this.Controls.Add(this.cmbCustomer);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "AddJobForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddJobForm";
             this.ResumeLayout(false);
             this.PerformLayout();

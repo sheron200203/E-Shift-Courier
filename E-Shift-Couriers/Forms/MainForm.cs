@@ -61,6 +61,11 @@ namespace E_Shift_Couriers.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
             var user = Session.CurrentUser;
             if (user == null || user.Role != UserRole.Admin)
             {

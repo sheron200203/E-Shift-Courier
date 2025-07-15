@@ -39,6 +39,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsername.Location = new System.Drawing.Point(399, 86);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(159, 20);
@@ -46,6 +47,7 @@
             // 
             // txtNewPassword
             // 
+            this.txtNewPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNewPassword.Location = new System.Drawing.Point(399, 145);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(159, 20);
@@ -53,6 +55,7 @@
             // 
             // txtConfirmPassword
             // 
+            this.txtConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmPassword.Location = new System.Drawing.Point(399, 210);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(159, 20);
@@ -60,6 +63,7 @@
             // 
             // Update
             // 
+            this.Update.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Update.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Update.Location = new System.Drawing.Point(459, 297);
@@ -72,6 +76,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 149);
@@ -82,6 +87,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(231, 211);
@@ -92,6 +98,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(287, 90);
@@ -112,7 +119,9 @@
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.txtUsername);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "AdminProfileForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminProfileForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -39,6 +39,7 @@
             // 
             // txtProductName
             // 
+            this.txtProductName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductName.Location = new System.Drawing.Point(119, 38);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(235, 20);
@@ -47,6 +48,7 @@
             // 
             // dgvProducts
             // 
+            this.dgvProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Location = new System.Drawing.Point(12, 152);
             this.dgvProducts.Name = "dgvProducts";
@@ -57,6 +59,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(697, 92);
@@ -69,6 +72,7 @@
             // 
             // txtProductDesc
             // 
+            this.txtProductDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductDesc.Location = new System.Drawing.Point(540, 41);
             this.txtProductDesc.Name = "txtProductDesc";
             this.txtProductDesc.Size = new System.Drawing.Size(235, 20);
@@ -76,6 +80,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(38, 38);
@@ -86,6 +91,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(428, 42);
@@ -105,7 +111,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.txtProductName);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "ProductForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);

@@ -35,6 +35,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(189, 178);
@@ -45,6 +46,7 @@
             // 
             // cmbUnits
             // 
+            this.cmbUnits.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUnits.FormattingEnabled = true;
             this.cmbUnits.Location = new System.Drawing.Point(334, 178);
             this.cmbUnits.Name = "cmbUnits";
@@ -53,6 +55,7 @@
             // 
             // btnAssign
             // 
+            this.btnAssign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAssign.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssign.Location = new System.Drawing.Point(487, 236);
@@ -71,7 +74,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbUnits);
             this.Controls.Add(this.btnAssign);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "AssignTransportUnitForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AssignTransportUnitForm";
             this.ResumeLayout(false);
             this.PerformLayout();

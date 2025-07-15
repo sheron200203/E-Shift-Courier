@@ -46,9 +46,11 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tab1);
             this.tabControl1.Controls.Add(this.tab2);
             this.tabControl1.Controls.Add(this.tab3);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -68,10 +70,10 @@
             // dgvJobSummary
             // 
             this.dgvJobSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobSummary.Location = new System.Drawing.Point(0, 77);
+            this.dgvJobSummary.Location = new System.Drawing.Point(8, 82);
             this.dgvJobSummary.Name = "dgvJobSummary";
             this.dgvJobSummary.RowHeadersWidth = 51;
-            this.dgvJobSummary.Size = new System.Drawing.Size(796, 347);
+            this.dgvJobSummary.Size = new System.Drawing.Size(776, 339);
             this.dgvJobSummary.TabIndex = 0;
             // 
             // tab2
@@ -97,9 +99,9 @@
             // tab3
             // 
             this.tab3.Controls.Add(this.dgvTransportUtil);
-            this.tab3.Location = new System.Drawing.Point(4, 22);
+            this.tab3.Location = new System.Drawing.Point(4, 25);
             this.tab3.Name = "tab3";
-            this.tab3.Size = new System.Drawing.Size(792, 427);
+            this.tab3.Size = new System.Drawing.Size(792, 424);
             this.tab3.TabIndex = 2;
             this.tab3.Text = "Transport";
             this.tab3.UseVisualStyleBackColor = true;
@@ -119,7 +121,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "ReportsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportsForm";
             this.tabControl1.ResumeLayout(false);
             this.tab1.ResumeLayout(false);

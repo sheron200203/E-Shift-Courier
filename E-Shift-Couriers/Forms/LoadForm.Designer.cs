@@ -35,19 +35,21 @@
             // 
             // dgvLoads
             // 
+            this.dgvLoads.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvLoads.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoads.Location = new System.Drawing.Point(12, 67);
+            this.dgvLoads.Location = new System.Drawing.Point(12, 91);
             this.dgvLoads.Name = "dgvLoads";
             this.dgvLoads.RowHeadersWidth = 51;
-            this.dgvLoads.Size = new System.Drawing.Size(861, 391);
+            this.dgvLoads.Size = new System.Drawing.Size(776, 321);
             this.dgvLoads.TabIndex = 9;
             this.dgvLoads.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoads_CellContentClick);
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(783, 25);
+            this.button1.Location = new System.Drawing.Point(698, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 36);
             this.button1.TabIndex = 8;
@@ -59,10 +61,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 474);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvLoads);
             this.Controls.Add(this.button1);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "LoadForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoads)).EndInit();
             this.ResumeLayout(false);
