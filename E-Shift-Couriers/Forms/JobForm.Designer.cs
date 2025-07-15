@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             // 
             this.cmbCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbCustomer.FormattingEnabled = true;
-            this.cmbCustomer.Location = new System.Drawing.Point(200, 55);
+            this.cmbCustomer.Location = new System.Drawing.Point(148, 104);
             this.cmbCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCustomer.Name = "cmbCustomer";
             this.cmbCustomer.Size = new System.Drawing.Size(387, 24);
@@ -52,10 +53,21 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             this.dgvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvJobs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvJobs.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvJobs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJobs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobs.EnableHeadersVisualStyles = false;
             this.dgvJobs.Location = new System.Drawing.Point(16, 177);
             this.dgvJobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvJobs.Name = "dgvJobs";
@@ -69,7 +81,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 57);
+            this.label3.Location = new System.Drawing.Point(29, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
@@ -82,7 +94,7 @@
             this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.Location = new System.Drawing.Point(636, 53);
+            this.btnFilter.Location = new System.Drawing.Point(543, 104);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(100, 28);
@@ -96,7 +108,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(935, 110);
+            this.button1.Location = new System.Drawing.Point(935, 90);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 49);
