@@ -38,9 +38,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(189, 178);
+            this.label3.Location = new System.Drawing.Point(29, 167);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 16);
+            this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "Transport Unit";
             // 
@@ -48,9 +49,10 @@
             // 
             this.cmbUnits.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUnits.FormattingEnabled = true;
-            this.cmbUnits.Location = new System.Drawing.Point(334, 178);
+            this.cmbUnits.Location = new System.Drawing.Point(161, 167);
+            this.cmbUnits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbUnits.Name = "cmbUnits";
-            this.cmbUnits.Size = new System.Drawing.Size(251, 21);
+            this.cmbUnits.Size = new System.Drawing.Size(255, 24);
             this.cmbUnits.TabIndex = 25;
             // 
             // btnAssign
@@ -58,9 +60,10 @@
             this.btnAssign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAssign.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssign.Location = new System.Drawing.Point(487, 236);
+            this.btnAssign.Location = new System.Drawing.Point(295, 227);
+            this.btnAssign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(98, 46);
+            this.btnAssign.Size = new System.Drawing.Size(121, 50);
             this.btnAssign.TabIndex = 24;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = false;
@@ -68,13 +71,13 @@
             // 
             // AssignTransportUnitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(445, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbUnits);
             this.Controls.Add(this.btnAssign);
-            this.MinimumSize = new System.Drawing.Size(818, 497);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AssignTransportUnitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AssignTransportUnitForm";
